@@ -19,11 +19,7 @@ import java.util.List;
 
 import org.docksidestage.bizfw.colorbox.ColorBox;
 import org.docksidestage.bizfw.colorbox.color.BoxColor;
-import org.docksidestage.bizfw.colorbox.space.BoxSpace;
 import org.docksidestage.javatry.colorbox.base.YourPrivateRoom;
-import org.docksidestage.javatry.colorbox.base.YourPrivateRoom.DevilBox;
-import org.docksidestage.javatry.colorbox.base.YourPrivateRoom.DevilBoxTextNotFoundException;
-import org.docksidestage.javatry.colorbox.base.YourPrivateRoom.SecretBox;
 import org.docksidestage.unit.PlainTestCase;
 
 /**
@@ -55,21 +51,6 @@ public class Step11ClassicStringTest extends PlainTestCase {
      * (カラーボックスに入ってる文字列の中で、一番長い文字列は？)
      */
     public void test_length_findMax() {
-        Integer max = null;
-        List<ColorBox> colorBoxList = new YourPrivateRoom().getColorBoxList();
-        for (ColorBox colorBox : colorBoxList) {
-            List<BoxSpace> spaceList = colorBox.getSpaceList();
-            for (BoxSpace space : spaceList) {
-                Object content = space.getContent();
-                if (content instanceof String) {
-                    int length = ((String) content).length();
-                    if (max == null || max > length) {
-                        max = length;
-                    }
-                }
-            }
-        }
-        log(max != null ? max : "*not found string content");
     }
 
     /**
@@ -108,21 +89,6 @@ public class Step11ClassicStringTest extends PlainTestCase {
      * ("Water" で始まる文字列をしまっているカラーボックスの色は？)
      */
     public void test_startsWith_findFirstWord() {
-        String colorName = null;
-        List<ColorBox> colorBoxList = new YourPrivateRoom().getColorBoxList();
-        rootLoop: for (ColorBox colorBox : colorBoxList) {
-            List<BoxSpace> spaceList = colorBox.getSpaceList();
-            for (BoxSpace boxSpace : spaceList) {
-                Object content = boxSpace.getContent();
-                if (content instanceof String) {
-                    if (((String) content).startsWith("Water")) {
-                        colorName = colorBox.getColor().getColorName();
-                        break rootLoop;
-                    }
-                }
-            }
-        }
-        log(colorName != null ? colorName : "Not found the water box");
     }
 
     /**
@@ -191,29 +157,6 @@ public class Step11ClassicStringTest extends PlainTestCase {
      * (カラーボックスの中に入っているDevilBoxクラスのtextの長さの合計は？)
      */
     public void test_welcomeToDevil() {
-        List<ColorBox> colorBoxList = new YourPrivateRoom().getColorBoxList();
-        for (ColorBox colorBox : colorBoxList) {
-            List<BoxSpace> spaceList = colorBox.getSpaceList();
-            for (BoxSpace boxSpace : spaceList) {
-                Object content = boxSpace.getContent();
-                log(content);
-                if (content instanceof SecretBox) {
-                    log("  " + ((SecretBox) content).getText());
-                }
-                if (content instanceof DevilBox) {
-                    DevilBox devilBox = (DevilBox) content;
-                    devilBox.wakeUp();
-                    devilBox.allowMe();
-                    devilBox.open();
-                    String text = null;
-                    try {
-                        text = devilBox.getText();
-                    } catch (DevilBoxTextNotFoundException ignored) { // means null text
-                    }
-                    log("  " + text);
-                }
-            }
-        }
     }
 
     // ===================================================================================
