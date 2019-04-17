@@ -187,9 +187,13 @@ public class YourPrivateRoom {
             this.text = text;
         }
 
+        public void wakeUp() {
+            wakeup = true;
+        }
+
         public void allowMe() {
             if (!wakeup) {
-                String msg = "The devil is sleep now so call wakeup() method before calling this.";
+                String msg = "The devil is sleep now so call wakeUp() method before calling this.";
                 throw new IllegalStateException(msg);
             }
             allowed = true;
