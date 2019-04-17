@@ -22,7 +22,7 @@ import org.docksidestage.javatry.colorbox.base.YourPrivateRoom;
 import org.docksidestage.unit.PlainTestCase;
 
 /**
- * Step15. test of String with color-box, using Stream API you can. <br>
+ * The test of String with color-box, using Stream API you can. <br>
  * Show answer by log() for question of javadoc.
  * @author jflute
  * @author your_name_here
