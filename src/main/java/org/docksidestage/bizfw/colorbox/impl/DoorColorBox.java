@@ -23,7 +23,7 @@ import org.docksidestage.bizfw.colorbox.space.DoorBoxSpace;
 /**
  * @author jflute
  */
-public class DoorColorBox extends StandardColorBox { // actually door function should be plug-in?
+public class DoorColorBox extends StandardColorBox { // however door function should be plug-in?
 
     public DoorColorBox(BoxColor color, BoxSize spaceSize) {
         super(color, spaceSize);
