@@ -33,7 +33,7 @@ public class Step12StreamStringTest extends PlainTestCase {
     //                                                                            length()
     //                                                                            ========
     /**
-     * What is color name length of first color-box?
+     * What is color name length of first color-box? <br>
      * (最初のカラーボックスの色の名前の文字数は？)
      */
     public void test_length_basic() {

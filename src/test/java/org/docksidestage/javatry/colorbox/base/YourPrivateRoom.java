@@ -91,7 +91,8 @@ public class YourPrivateRoom {
         map.put("2-Day Passport", 13200);
         map.put("Land Annual Passport", 61000);
         map.put("Sea Annual Passport", 61000);
-        map.put("2-Park Annual Passport", 89000);
+        // trap for plural top
+        //map.put("2-Park Annual Passport", 89000);
         colorBox.getLowerSpace().setContent(map);
         return colorBox;
     }

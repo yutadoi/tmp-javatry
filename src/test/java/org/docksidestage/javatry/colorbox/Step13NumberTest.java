@@ -29,25 +29,29 @@ public class Step13NumberTest extends PlainTestCase {
     //                                                                               Basic
     //                                                                               =====
     /**
-     * カラーボックの中に入っているInteger型で、0から54までの値は何個ある？
+     * How many integer-type values in color-boxes are between 0 and 54? <br>
+     * (カラーボックの中に入っているInteger型で、0から54までの値は何個ある？)
      */
     public void test_countZeroToFiftyFour_IntegerOnly() {
     }
 
     /**
-     * カラーボックの中に入っている数値で、0から54までの値は何個ある？
+     * How many number values in color-boxes are between 0 and 54? <br>
+     * (カラーボックの中に入っている数値で、0から54までの値は何個ある？)
      */
     public void test_countZeroToFiftyFour_Number() {
     }
 
     /**
-     * カラーボックスの中で、BoxSizeの幅が一番大きいものでInteger型の Content を持っているカラーボックスの色は？
+     * What color name is used by color-box that has integer-type content and the biggest width in them? <br>
+     * (カラーボックスの中で、Integer型の Content を持っていてBoxSizeの幅が一番大きいカラーボックスの色は？)
      */
     public void test_findColorBigWidthHasInteger() {
     }
 
     /**
-     * カラーボックスの中に入ってる List の中の BigDecimal を全て足し合わせると？
+     * What is total of BigDecimal values in List in color-boxes? <br>
+     * (カラーボックスの中に入ってる List の中の BigDecimal を全て足し合わせると？)
      */
     public void test_sumBigDecimalInList() {
     }
@@ -56,13 +60,15 @@ public class Step13NumberTest extends PlainTestCase {
     //                                                                           Challenge
     //                                                                           =========
     /**
-     * カラーボックスに入ってる、valueが数値のみの Map の中で一番大きいvalueのkeyは？
+     * What key is related to value that is max number in Map that has only number in color-boxes? <br>
+     * (カラーボックスに入ってる、valueが数値のみの Map の中で一番大きいvalueのkeyは？)
      */
     public void test_findMaxMapNumberValue() {
     }
 
     /**
-     * カラーボックスに入ってる Map の中のvalueの数値・数字の合計は？
+     * What is total of number or number-character values in Map in purple color-box? <br> 
+     * (purpleのカラーボックスに入ってる Map の中のvalueの数値・数字の合計は？)
      */
     public void test_sumMapNumberValue() {
     }

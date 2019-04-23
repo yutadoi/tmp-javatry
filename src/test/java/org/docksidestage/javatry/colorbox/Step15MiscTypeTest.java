@@ -29,13 +29,13 @@ public class Step15MiscTypeTest extends PlainTestCase {
     //                                                                           Exception
     //                                                                           =========
     /**
-     * カラーボックスに入っているthrowできるオブジェクトのクラス名は？
+     * (カラーボックスに入っているthrowできるオブジェクトのクラス名は？)
      */
     public void test_throwable() {
     }
 
     /**
-     * カラーボックスに入っている例外オブジェクトのネストした例外インスタンスのメッセージは？
+     * (カラーボックスに入っている例外オブジェクトのネストした例外インスタンスのメッセージは？)
      */
     public void test_nestedException() {
     }
@@ -44,7 +44,7 @@ public class Step15MiscTypeTest extends PlainTestCase {
     //                                                                           Interface
     //                                                                           =========
     /**
-     * カラーボックスに入っているFavoriteProviderインターフェースのjustHere()メソッドの戻り値は？
+     * (カラーボックスに入っているFavoriteProviderインターフェースのjustHere()メソッドの戻り値は？)
      */
     public void test_interfaceCall() {
     }
@@ -53,7 +53,7 @@ public class Step15MiscTypeTest extends PlainTestCase {
     //                                                                            Optional
     //                                                                            ========
     /**
-     * beigeのカラーボックスに入っているListの中のBoxedResortのBoxedStageのkeywordは？(値がなければ固定の"none"という値を)
+     * (beigeのカラーボックスに入っているListの中のBoxedResortのBoxedStageのkeywordは？(値がなければ固定の"none"という値を))
      */
     public void test_optionalMapping() {
     }
@@ -62,7 +62,7 @@ public class Step15MiscTypeTest extends PlainTestCase {
     //                                                                           Challenge
     //                                                                           =========
     /**
-     * getColorBoxList()メソッドの中のmakeEighthColorBox()メソッドを呼び出している箇所の行数は？(目視ではなく)
+     * (getColorBoxList()メソッドの中のmakeEighthColorBox()メソッドを呼び出している箇所の行数は？)
      */
     public void test_lineNumber() {
     }

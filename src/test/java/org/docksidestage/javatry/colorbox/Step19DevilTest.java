@@ -29,7 +29,7 @@ public class Step19DevilTest extends PlainTestCase {
     //                                                                        Devil Parade
     //                                                                        ============
     /**
-     * nullを含んでいるカラーボックスの色の名前の3文字目の文字で色の名前が終わっているカラーボックスの深さの十の位の数字が小数点第二桁目になっているスペースの中のリストの中のBigDecimalの一の位の数字と同じ色の長さのカラーボックスの一番下のスペースに入っているものは？
+     * (nullを含んでいるカラーボックスの色の名前の3文字目の文字で色の名前が終わっているカラーボックスの深さの十の位の数字が小数点第二桁目になっているスペースの中のリストの中のBigDecimalの一の位の数字と同じ色の長さのカラーボックスの一番下のスペースに入っているものは？)
      */
     public void test_too_long() {
     }
@@ -38,7 +38,7 @@ public class Step19DevilTest extends PlainTestCase {
     //                                                                      Java Destroyer
     //                                                                      ==============
     /**
-     * (このテストメソッドの中だけで無理やり)赤いカラーボックスの高さを160に変更して、BoxSizeをtoString()すると？
+     * ((このテストメソッドの中だけで無理やり)赤いカラーボックスの高さを160に変更して、BoxSizeをtoString()すると？)
      */
     public void test_looks_like_easy() {
     }
@@ -47,7 +47,7 @@ public class Step19DevilTest extends PlainTestCase {
     //                                                                        Meta Journey
     //                                                                        ============
     /**
-     * カラーボックスに入っているFunctionalInterfaceアノテーションが付与されているインターフェースのFunctionnalメソッドの戻り値は？
+     * (カラーボックスに入っているFunctionalInterfaceアノテーションが付与されているインターフェースのFunctionnalメソッドの戻り値は？)
      */
     public void test_be_frameworker() {
     }
