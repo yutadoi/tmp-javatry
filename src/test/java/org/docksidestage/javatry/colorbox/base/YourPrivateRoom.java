@@ -87,12 +87,16 @@ public class YourPrivateRoom {
         colorBox.getUpperSpace().setContent(new File("/tmp/javatry/docksidestage.txt"));
         Map<String, Integer> map = new LinkedHashMap<String, Integer>();
         map.put("1-Day Passport", 7400); // these are when 2019/04/15
+        map.put("Starlight Passport", 5400);
         map.put("After 6 Passport", 4200);
         map.put("2-Day Passport", 13200);
+        map.put("3-Day Magic Passport", 17800);
+        map.put("4-Day Magic Passport", 22400);
         map.put("Land Annual Passport", 61000);
         map.put("Sea Annual Passport", 61000);
         // trap for plural top
         //map.put("2-Park Annual Passport", 89000);
+        map.put("Group Passport", 6700);
         colorBox.getLowerSpace().setContent(map);
         return colorBox;
     }
@@ -156,11 +160,11 @@ public class YourPrivateRoom {
             harborMap.put("autumn", "vi");
             harborMap.put("winter", "jazz");
             seaMap.put("harbor", harborMap);
-            middleMap.put("Sea", seaMap);
+            middleMap.put("sea", seaMap);
             Map<String, List<String>> landMap = new LinkedHashMap<String, List<String>>();
             landMap.put("orleans", Arrays.asList("oh", "party"));
             landMap.put("showbase", Arrays.asList("oneman"));
-            middleMap.put("Land", landMap);
+            middleMap.put("land", landMap);
             colorBox.getMiddleSpace().setContent(middleMap);
         }
         {
@@ -195,8 +199,8 @@ public class YourPrivateRoom {
         List<BoxedResort> resortList = new ArrayList<>();
         resortList.add(new BoxedResort("nullhama", null));
         resortList.add(new BoxedResort("nullsea", new BoxedPark("sea", null)));
-        resortList.add(new BoxedResort("nullover", new BoxedPark("sea", new BoxedStage("over", null))));
-        resortList.add(new BoxedResort("maihama", new BoxedPark("sea", new BoxedStage("over", "dream cruise"))));
+        resortList.add(new BoxedResort("nullside", new BoxedPark("sea", new BoxedStage("dockside", null))));
+        resortList.add(new BoxedResort("maihama", new BoxedPark("sea", new BoxedStage("dockside", "dream cruise"))));
         colorBox.getLowerSpace().setContent(resortList);
         return colorBox;
     }
@@ -382,6 +386,11 @@ public class YourPrivateRoom {
             this.stage = stage;
         }
 
+        @Override
+        public String toString() {
+            return "{" + theme + ", " + stage + "}";
+        }
+
         public String getTheme() {
             return theme;
         }
@@ -399,6 +408,11 @@ public class YourPrivateRoom {
         public BoxedStage(String showName, String keyword) {
             this.showName = showName;
             this.keyword = keyword;
+        }
+
+        @Override
+        public String toString() {
+            return "{" + showName + ", " + keyword + "}";
         }
 
         public String getShowName() {
