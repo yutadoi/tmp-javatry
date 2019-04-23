@@ -19,12 +19,18 @@ import java.util.List;
 
 import org.docksidestage.bizfw.colorbox.ColorBox;
 import org.docksidestage.bizfw.colorbox.color.BoxColor;
+import org.docksidestage.bizfw.colorbox.space.BoxSpace;
 import org.docksidestage.javatry.colorbox.base.YourPrivateRoom;
 import org.docksidestage.unit.PlainTestCase;
 
 /**
  * The test of String with color-box, not using Stream API. <br>
- * Show answer by log() for question of javadoc.
+ * Show answer by log() for question of javadoc. <br>
+ * <pre>
+ * addition:
+ * o e.g. "string in color-boxes" means String-type content in space of color-box
+ * o don't fix the YourPrivateRoom class and color-box classes
+ * </pre>
  * @author jflute
  * @author your_name_here
  */
@@ -51,6 +57,22 @@ public class Step11ClassicStringTest extends PlainTestCase {
      * (カラーボックスに入ってる文字列の中で、一番長い文字列は？)
      */
     public void test_length_findMax() {
+        List<ColorBox> colorBoxList = new YourPrivateRoom().getColorBoxList();
+        String max = null;
+        for (ColorBox colorBox : colorBoxList) {
+            List<BoxSpace> spaceList = colorBox.getSpaceList();
+            for (BoxSpace boxSpace : spaceList) {
+                Object content = boxSpace.getContent();
+                if (content instanceof String) {
+                    String strContent = (String) content;
+                    int currentLength = strContent.length();
+                    if (max == null || max.length() < currentLength) {
+                        max = strContent;
+                    }
+                }
+            }
+        }
+        log(max);
     }
 
     /**
