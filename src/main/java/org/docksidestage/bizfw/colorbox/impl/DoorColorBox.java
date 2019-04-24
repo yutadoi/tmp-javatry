@@ -15,6 +15,9 @@
  */
 package org.docksidestage.bizfw.colorbox.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.docksidestage.bizfw.colorbox.color.BoxColor;
 import org.docksidestage.bizfw.colorbox.size.BoxSize;
 import org.docksidestage.bizfw.colorbox.space.BoxSpace;
@@ -32,5 +35,13 @@ public class DoorColorBox extends StandardColorBox { // however door function sh
     @Override
     protected BoxSpace createSpace(BoxSize spaceSize) {
         return new DoorBoxSpace(spaceSize);
+    }
+
+    public List<DoorBoxSpace> getDoorSpaceList() { // cast method
+        List<DoorBoxSpace> resultList = new ArrayList<DoorBoxSpace>();
+        for (BoxSpace boxSpace : getSpaceList()) {
+            resultList.add((DoorBoxSpace) boxSpace);
+        }
+        return resultList;
     }
 }

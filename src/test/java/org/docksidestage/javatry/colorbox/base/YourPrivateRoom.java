@@ -36,6 +36,7 @@ import org.docksidestage.bizfw.colorbox.impl.CompactColorBox;
 import org.docksidestage.bizfw.colorbox.impl.DoorColorBox;
 import org.docksidestage.bizfw.colorbox.impl.StandardColorBox;
 import org.docksidestage.bizfw.colorbox.size.BoxSize;
+import org.docksidestage.bizfw.colorbox.space.DoorBoxSpace;
 
 /**
  * @author jflute
@@ -207,9 +208,15 @@ public class YourPrivateRoom {
 
     private DoorColorBox makeTenthColorBox() {
         DoorColorBox colorBox = new DoorColorBox(new BoxColor("grey"), new BoxSize(50, 40, 30));
+        for (DoorBoxSpace boxSpace : colorBox.getDoorSpaceList()) {
+            boxSpace.openTheDoor();
+        }
         colorBox.getUpperSpace().setContent(LocalTime.of(12, 48, 24));
         colorBox.getMiddleSpace().setContent(null); // spare
         colorBox.getLowerSpace().setContent(null); // spare
+        for (DoorBoxSpace boxSpace : colorBox.getDoorSpaceList()) {
+            boxSpace.closeTheDoor();
+        }
         return colorBox;
     }
 

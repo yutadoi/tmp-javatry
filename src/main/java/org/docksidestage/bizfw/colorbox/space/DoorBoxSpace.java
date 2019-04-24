@@ -82,6 +82,10 @@ public class DoorBoxSpace extends BoxSpace {
         open = true;
     }
 
+    public void closeTheDoor() {
+        open = false;
+    }
+
     public boolean isBroken() {
         return damageCount >= BROKEN_DAMAGE;
     }

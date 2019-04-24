@@ -29,12 +29,14 @@ public class Step15MiscTypeTest extends PlainTestCase {
     //                                                                           Exception
     //                                                                           =========
     /**
+     * What class name is throw-able object in color-boxes? <br>
      * (カラーボックスに入っているthrowできるオブジェクトのクラス名は？)
      */
     public void test_throwable() {
     }
 
     /**
+     * What message is for exception that is nested by exception in color-boxes? <br>
      * (カラーボックスに入っている例外オブジェクトのネストした例外インスタンスのメッセージは？)
      */
     public void test_nestedException() {
@@ -44,6 +46,7 @@ public class Step15MiscTypeTest extends PlainTestCase {
     //                                                                           Interface
     //                                                                           =========
     /**
+     * What value is returned by justHere() of FavoriteProvider in yellow color-box? <br>
      * (カラーボックスに入っているFavoriteProviderインターフェースのjustHere()メソッドの戻り値は？)
      */
     public void test_interfaceCall() {
@@ -53,6 +56,7 @@ public class Step15MiscTypeTest extends PlainTestCase {
     //                                                                            Optional
     //                                                                            ========
     /**
+     * What keyword is in BoxedStage of BoxedResort in List in beige color-box? (show "none" if no value) <br>
      * (beigeのカラーボックスに入っているListの中のBoxedResortのBoxedStageのkeywordは？(値がなければ固定の"none"という値を))
      */
     public void test_optionalMapping() {
@@ -62,6 +66,7 @@ public class Step15MiscTypeTest extends PlainTestCase {
     //                                                                           Challenge
     //                                                                           =========
     /**
+     * What line number is makeEighthColorBox() call in getColorBoxList()? <br>
      * (getColorBoxList()メソッドの中のmakeEighthColorBox()メソッドを呼び出している箇所の行数は？)
      */
     public void test_lineNumber() {
